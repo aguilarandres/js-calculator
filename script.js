@@ -38,7 +38,34 @@ class Calculator {
 
   compute() {
 
-  }
+    let computation
+    // convert String to a Number
+    const prev = parseFloat(this.previousOperand)
+    const current = parseFloat(this.currentOperand)
+    // do not compute if there are no values
+    if(isNaN(prev) || isNaN(current)) return
+
+    switch(this.operation) {
+      case '+':
+        computation = prev + current
+        break
+      case '-':
+        computation = prev - current
+        break
+      case '*':
+        computation = prev * current
+        break
+      case '÷':
+        computation = prev / current
+        break
+      default:
+        return
+      } // switch END
+
+      this.currentOperand = computation
+      this.operation = undefined
+      this.previousOperand = ''
+  } // compute function END
 
   updateDisplay() {
     this.currentOperandTextElement.innerText = this.currentOperand
