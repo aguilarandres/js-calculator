@@ -7,7 +7,7 @@
 body {
   padding: 0; /* set padding to zero to fill entire screen */
   margin: 0; /*  set margin to zero to fill entire screen  */
-  background: linear-gradient(to right, #00AAFF, #00FF6C);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 }
 
 .calculator-grid {
