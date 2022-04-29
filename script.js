@@ -2,7 +2,7 @@ class Calculator {
   constructor(previousOperandTextElement, currentOperandTextElement) {
     this.previousOperandTextElement = previousOperandTextElement
     this.currentOperandTextElement  = currentOperandTextElement
-    this.clear() // set all inputs to default values as soon as object is instantiated
+    this.clear() // set inputs to default values when object is instantiated
   }
 
   clear() {
@@ -16,12 +16,10 @@ class Calculator {
   }
 
   append(number) {
-    // check for decimal pointer
+    // check for decimal point
     if(number === '.' && this.currentOperand.includes('.')) return
-
     // convert to string so that input value is appended
     this.currentOperand = this.currentOperand.toString() + number.toString()
-
   }
 
   selectOperation(operation) {
@@ -72,6 +70,7 @@ class Calculator {
     // append operation symbol to the end of numeric value
     if(this.operation != null) {
       this.previousOperandTextElement.innerText =
+        // concatenate the operation symbol to the previous operand
         `${this.previousOperand} ${this.operation}`
     }
   }
