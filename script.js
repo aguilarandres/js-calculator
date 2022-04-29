@@ -27,7 +27,7 @@ class Calculator {
   }
 
   updateDisplay() {
-
+    this.currentOperandTextElement.innerText = this.currentOperand
   }
 } // class Calculator END
 
