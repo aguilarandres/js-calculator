@@ -27,6 +27,10 @@ class Calculator {
   selectOperation(operation) {
     // check that there is a value to operate on
     if(this.currentOperand === '') return
+    // execute computation and append the operation symbol when a value has previously been computed
+    if(this.previousOperand !== '') {
+      this.compute()
+    }
     this.operation = operation
     this.previousOperand = this.currentOperand
     this.currentOperand = ''
