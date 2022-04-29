@@ -65,13 +65,17 @@ class Calculator {
       this.previousOperand = ''
   } // compute function END
 
+  getDisplayNumber(number) {
+    return number;
+  }
+
   updateDisplay() {
-    this.currentOperandTextElement.innerText = this.currentOperand
+    this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand)
     // append operation symbol to the end of numeric value
     if(this.operation != null) {
       this.previousOperandTextElement.innerText =
         // use template literals to create an updated string that includes the previous operand followed by the operation symbol
-        `${this.previousOperand} ${this.operation}`
+        `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
     }
   }
 } // class Calculator END
