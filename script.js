@@ -59,14 +59,27 @@ class Calculator {
       default:
         return
       } // switch END
-
       this.currentOperand = computation
       this.operation = undefined
       this.previousOperand = ''
   } // compute function END
 
   getDisplayNumber(number) {
-    return number;
+    const stringNumber = number.toString()
+    // convert integer part of the string into a number
+    const integerDigits = parseFloat(stringNumber.split('.')[0])
+    const decimalDigits = stringNumber.split('.')[1]
+    let integerDisplay
+    if(isNaN(integerDigits)) {
+      integerDisplay = ''
+    } else {
+      integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 })
+    }
+    if(decimalDigits != null) {
+      return `${integerDisplay}.${decimalDigits}`
+    } else {
+      return integerDisplay
+    }
   }
 
   updateDisplay() {
