@@ -15,7 +15,11 @@ class Calculator {
   }
 
   append(number) {
+    // check for decimal pointer
+    if(number === '.' && this.currentOperand.includes('.')) return
 
+    // convert to string so that input value is appended
+    this.currentOperand = this.currentOperand.toString() + number.toString()
   }
 
   selectOperation(operation) {
