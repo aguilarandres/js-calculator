@@ -2,6 +2,7 @@ class Calculator {
   constructor(previousOperandTextElement, currentOperandTextElement) {
     this.previousOperandTextElement = previousOperandTextElement
     this.currentOperandTextElement  = currentOperandTextElement
+    this.clear() // set all inputs to default values as soon as object is instantiated
   }
 
   clear() {
@@ -20,6 +21,7 @@ class Calculator {
 
     // convert to string so that input value is appended
     this.currentOperand = this.currentOperand.toString() + number.toString()
+
   }
 
   selectOperation(operation) {
