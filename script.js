@@ -89,6 +89,8 @@ class Calculator {
       this.previousOperandTextElement.innerText =
         // use template literals to create an updated string that includes the previous operand followed by the operation symbol
         `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
+    } else {
+      this.previousOperandTextElement.innerText = ''
     }
   }
 } // class Calculator END
