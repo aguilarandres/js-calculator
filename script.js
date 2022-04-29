@@ -25,6 +25,8 @@ class Calculator {
   }
 
   selectOperation(operation) {
+    // check that there is a value to operate on
+    if(this.currentOperand === '') return
     this.operation = operation
     this.previousOperand = this.currentOperand
     this.currentOperand = ''
