@@ -69,7 +69,11 @@ class Calculator {
 
   updateDisplay() {
     this.currentOperandTextElement.innerText = this.currentOperand
-    this.previousOperandTextElement.innerText = this.previousOperand
+    // append operation symbol to the end of numeric value
+    if(this.operation != null) {
+      this.previousOperandTextElement.innerText =
+        `${this.previousOperand} ${this.operation}`
+    }
   }
 } // class Calculator END
 
