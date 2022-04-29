@@ -70,7 +70,7 @@ class Calculator {
     // append operation symbol to the end of numeric value
     if(this.operation != null) {
       this.previousOperandTextElement.innerText =
-        // concatenate the operation symbol to the previous operand
+        // use template literals to create an updated string that includes the previous operand followed by the operation symbol
         `${this.previousOperand} ${this.operation}`
     }
   }
