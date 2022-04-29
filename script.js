@@ -25,7 +25,9 @@ class Calculator {
   }
 
   selectOperation(operation) {
-
+    this.operation = operation
+    this.previousOperand = this.currentOperand
+    this.currentOperand = ''
   }
 
   compute() {
