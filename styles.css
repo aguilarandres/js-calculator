@@ -20,6 +20,7 @@ body {
 }
 
 .calculator-grid > button {
+  border-radius: 10px;
   cursor:pointer;
   font-size: 2rem;
   border: 1px solid #FFFFFF;
@@ -37,6 +38,7 @@ body {
 
 .output {
   grid-column: 1 / -1; /* span from the first column to the last column */
+  border-radius: 10px;
   background-color: rgba(0, 0, 0, .75);
   display: flex; /* align elements within container */
   align-items: flex-end; /* align on right side of container */
